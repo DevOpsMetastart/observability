@@ -38,6 +38,9 @@ services:
     command: -config.file=/etc/loki/loki-config.yml
     volumes:
       - ./loki/loki-config.yml:/etc/loki/loki-config.yml
+      - ./loki-data/index:/tmp/loki/index
+      - ./loki-data/chunks:/tmp/loki/chunks
+      - ./loki-data/cache:/tmp/loki/cache
     ports:
       - "3100:3100"
     restart: unless-stopped
