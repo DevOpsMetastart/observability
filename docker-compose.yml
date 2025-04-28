@@ -38,9 +38,9 @@ services:
     command: -config.file=/etc/loki/loki-config.yml
     volumes:
       - ./loki/loki-config.yml:/etc/loki/loki-config.yml
-      - ./loki-data/chunks:/tmp/loki/chunks
       - ./loki-data/index:/tmp/loki/index
       - ./loki-data/cache:/tmp/loki/cache
+      - ./loki-data/chunks:/tmp/loki/chunks
       - ./loki-data/wal:/tmp/loki/wal
     ports:
       - "3100:3100"
