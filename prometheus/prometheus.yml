@@ -10,10 +10,11 @@ scrape_configs:
     static_configs:
       - targets: ['alertmanager:9093']
 
-  # Later add your backend servers here
-  # - job_name: 'my-backend-app'
-  #   static_configs:
-  #     - targets: ['host.docker.internal:3001']
+  - job_name: 'soulspace-staging-backend'
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ['aimetastartsoulspaceserver-production.up.railway.app']
 
 alerting:
   alertmanagers:
