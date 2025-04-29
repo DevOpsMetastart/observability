@@ -12,9 +12,9 @@ scrape_configs:
 
   - job_name: 'soulspace-staging-backend'
     metrics_path: /metrics
-    scheme: https
+    scheme: http
     static_configs:
-      - targets: ['dlmu0324yctgq.cloudfront.net']
+      - targets: ['13.232.232.51']
 
 alerting:
   alertmanagers:
