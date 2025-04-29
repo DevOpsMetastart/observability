@@ -14,7 +14,7 @@ scrape_configs:
     metrics_path: /metrics
     scheme: https
     static_configs:
-      - targets: ['aimetastartsoulspaceserver-production.up.railway.app']
+      - targets: ['13.232.232.51:80']
 
 alerting:
   alertmanagers:
