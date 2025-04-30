@@ -12,9 +12,9 @@ scrape_configs:
 
   - job_name: 'soulspace-staging-backend'
     metrics_path: /metrics
-    scheme: http
+    scheme: https
     static_configs:
-      - targets: ['dlmu0324yctgq.cloudfront.net']
+      - targets: ['aimetastartsoulspaceserver-production.up.railway.app']
 
 alerting:
   alertmanagers:
