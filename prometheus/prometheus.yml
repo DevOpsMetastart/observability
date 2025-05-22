@@ -18,7 +18,7 @@ scrape_configs:
   
   - job_name: 'test node server'
     metrics_path: /metrics
-    scheme: https
+    scheme: http
     static_configs:
       - targets: ['43.204.112.94:8000']
 
