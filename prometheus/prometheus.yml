@@ -10,11 +10,17 @@ scrape_configs:
     static_configs:
       - targets: ['alertmanager:9093']
 
-  - job_name: 'soulspace-staging-backend'
+  # - job_name: 'soulspace-staging-backend'
+  #   metrics_path: /metrics
+  #   scheme: https
+  #   static_configs:
+  #     - targets: ['aimetastartsoulspaceserver-production.up.railway.app']
+  
+  - job_name: 'test node server'
     metrics_path: /metrics
     scheme: https
     static_configs:
-      - targets: ['aimetastartsoulspaceserver-production.up.railway.app']
+      - targets: ['43.204.112.94:8000']
 
 alerting:
   alertmanagers:
